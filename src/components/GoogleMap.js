@@ -3,11 +3,24 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 
 const style = {
-  width: '60%',
-  height: '60%'
+  width: '100%',
+  height: '100%',
+  position: 'relative'
 }
 
 export class GoogleMap extends PureComponent {
+
+  renderMarker = (row, index) => {
+    console.log(row)
+    return (
+      <Marker
+      name={row.name}
+      position={{lat: row.coordinate[0], lng: row.coordinate[1]}}
+      />
+    )
+  }
+
+
 render() {
     return (
       <Map google={this.props.google}
@@ -16,15 +29,12 @@ render() {
             lat: 52.3666451,
             lng: 4.892397
           }}
-          zoom={15}
+          zoom={13}
           onClick={this.onMapClicked}
           >
 
-        <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
+          {this.props.officeRows ? this.props.officeRows.map(this.renderMarker) : ""}
 
-        <InfoWindow onClose={this.onInfoWindowClose}>
-        </InfoWindow>
       </Map>
     );
   }
