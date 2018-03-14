@@ -15,8 +15,7 @@ export default (persons, city) => {
       })
     })
     .catch((error) => {
-      // todo implement error handling for api call
-    console.log('Sorry, something went wrong ')
+      console.log('Sorry, something went wrong ')
     })
   }
 }
