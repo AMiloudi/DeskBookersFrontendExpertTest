@@ -6,9 +6,9 @@ export default class ApiClient {
         this.host = 'https://www.deskbookers.com/nl-nl/explore/ajax.json'
     }
 
-    get(persons, search) {
+    get(persons, city) {
         return request
-            .get(this.createUrl("?people" + persons + "&q=" + search))
+            .get(this.createUrl("?people" + persons + "&q=" + city))
             .set(this.headers())
     }
 

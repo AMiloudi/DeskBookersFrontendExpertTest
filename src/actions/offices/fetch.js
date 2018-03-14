@@ -5,10 +5,10 @@ export const FETCH_SEARCH_DATA = 'FETCH_SEARCH_DATA'
 
 const api = new API()
 
-export default (persons, search) => {
+export default (persons, city) => {
   return (dispatch) => {
 
-  api.get(persons, search)
+  api.get(persons, city)
     .then((result) => {
       dispatch({
         type: FETCH_SEARCH_DATA,
