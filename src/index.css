@@ -8,12 +8,12 @@ body {
 }
 
 .Footer{
-   position: fixed;
-   left: 0;
-   bottom: 1rem;
-   width: 100%;
-   color: grey;
-   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 1rem;
+  width: 100%;
+  color: grey;
+  text-align: center;
 }
 
 .Header{
@@ -29,6 +29,12 @@ body {
 }
 
 .Form{
-margin-top: 50%;
-margin-left: 50%;
+  display: inline-block;
+  margin-top: 30%;
+  margin-left: 60%;
+}
+
+.Map{
+  margin-left: 50%;
+  margin-top: 20%;
 }
